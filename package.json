@@ -15,5 +15,8 @@
     "interval-promise": "^1.4.0",
     "nodemon": "^2.0.7",
     "socket.io": "^2.4.1"
+  },
+  "optionalDependencies": {
+    "fsevents": "2.1.2"
   }
 }

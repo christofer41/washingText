@@ -42,4 +42,4 @@ app.post("/replaceWords", (req,res) => {
   });
 
 
-server.listen(port, () => console.log(`Server is running on http://${host}:${port}`))
+server.listen(process.env.PORT, () => console.log(`Server is running on http://${host}:${port}`))

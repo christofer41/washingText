@@ -10,7 +10,7 @@ replaceWordsCollect();
 
 
 function replaceWordsCollect() {
-  fetch("http://localhost:3000/replaceWords").then((response) => {
+  fetch("https://washingtext.herokuapp.com/replaceWords").then((response) => {
     return response.json()
   }).then((replaceWords) => {
     replaceWordsPrint(replaceWords)
@@ -271,7 +271,7 @@ function handleFileSelect(evt) {
 
 
 
-      fetch("http://localhost:3000/replaceWords",
+      fetch("https://washingtext.herokuapp.com/replaceWords",
   {
       method: "POST",
       headers: {

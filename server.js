@@ -2,6 +2,7 @@ let express = require("express");
 let bodyParser = require("body-parser");
 const http = require('http')
 
+
 const app = express()
 const server = http.createServer(app)
 
@@ -12,16 +13,21 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('public'))
 
+
+response.setHeader("Access-Control-Allow-Origin", "https://washingtext.herokuapp.com/replaceWords")
+
 replaceWords = [
 ];
 
 app.get("/replaceWords", (req,res) => {
+    res.setHeader("Access-Control-Allow-Origin", "https://washingtext.herokuapp.com/replaceWords")
     res.json(replaceWords)
 });
 
 
 
 app.post("/replaceWords", (req,res) => {
+    res.setHeader("Access-Control-Allow-Origin", "https://washingtext.herokuapp.com/replaceWords")
     let word=req.body.word;
     let replace=req.body.replace;
   

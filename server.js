@@ -14,8 +14,6 @@ app.use(bodyParser.json());
 app.use(express.static('public'))
 
 
-response.setHeader("Access-Control-Allow-Origin", "https://washingtext.herokuapp.com/replaceWords")
-
 replaceWords = [
 ];
 

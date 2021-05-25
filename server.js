@@ -18,14 +18,14 @@ replaceWords = [
 ];
 
 app.get("/replaceWords", (req,res) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://washingtext.herokuapp.com/replaceWords")
+    res.setHeader("Access-Control-Allow-Origin", "http://washingtext.herokuapp.com")
     res.json(replaceWords)
 });
 
 
 
 app.post("/replaceWords", (req,res) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://washingtext.herokuapp.com/replaceWords")
+    res.setHeader("Access-Control-Allow-Origin", "http://washingtext.herokuapp.com")
     let word=req.body.word;
     let replace=req.body.replace;
   
